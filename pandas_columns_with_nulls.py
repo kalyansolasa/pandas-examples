@@ -6,6 +6,8 @@ print('data frame is:')
 print('##'*20)
 print(df)
 
+print('columns having null values')
+print('##'*20)
 print(df.columns[df.isnull().any()].tolist())
 
 
