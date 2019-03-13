@@ -24,6 +24,11 @@ def visit(graph, node, parent=None):
             if parent:
                 draw(parent, k, graph)
             visit(graph,v, k)
+        elif isinstance(v, list):
+            if parent:
+                draw(parent, k, graph)
+            for i in v:
+                draw(k,i, graph)
         else:
             draw(parent, k, graph)
             # drawing the label using a distinct name
